@@ -1,0 +1,39 @@
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 525, 0, 29)
+frame.BackgroundColor3 = Color3.new(0, 100, 0) 
+frame.BackgroundTransparency = 0
+frame.BorderSizePixel = 0
+frame.Visible = true
+frame.Parent = gui
+
+frame
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(0, 3) 
+corner.Parent = frame
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 0, 30) -- Set a fixed height for the text label
+textLabel.Position = UDim2.new(0, 0, 0, 0) -- Position at the top of the frame
+textLabel.BackgroundTransparency = 1 -- Transparent background
+textLabel.Text = "SonarBar HUB" -- Text content
+textLabel.Font = Enum.Font.Gotham -- Font style
+textLabel.TextColor3 = Color3.new(1, 1, 1) -- White text color
+textLabel.TextSize = 20 -- Text size
+textLabel.Parent = frame
+
+local closeButton = Instance.new("TextButton")
+closeButton.Size = UDim2.new(0, 20, 0, 20)
+closeButton.Position = UDim2.new(1, -25, 0, 5)
+closeButton.BackgroundTransparency = 1
+closeButton.Text = "X"
+closeButton.Font = Enum.Font.SourceSansBold
+closeButton.TextColor3 = Color3.new(1, 1, 1)
+closeButton.TextSize = 18
+closeButton.Parent = frame
+
+local function closeFrame()
+    frame:Destroy()
+end
